@@ -627,10 +627,11 @@ class _LoginPageState extends State<LoginPage> {
                 
               ),
             ),
+            SizedBox(height: 50),
             Text(
               'Login',
               style: TextStyle(
-                fontSize: 22.0,
+                fontSize: 28.0,
                 fontWeight: FontWeight.bold,
                 color: Colors.white,
               ),
@@ -651,9 +652,26 @@ class _LoginPageState extends State<LoginPage> {
                 style: TextStyle(fontSize: 18, color: Colors.white),
               ),
             ),
+            SizedBox(height: 30),
+            _buildSocialMediaButton(),
+            SizedBox(height: 20),
           ],
         ),
       ),
+    );
+  }
+  Widget _buildSocialMediaButton() {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        IconButton(
+          icon: FaIcon(FontAwesomeIcons.google),
+          onPressed: () {},
+          iconSize: 30,
+          color: Colors.white,
+        ),
+        
+      ],
     );
   }
 
